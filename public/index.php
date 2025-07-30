@@ -1,4 +1,12 @@
 <?php
+/*
+ * Copyright (c) 2025 Алексей
+ * Licensed under the MIT License.
+ */
+?>
+
+
+<?php
 include __DIR__ . '/../kernel/kernel.php';
 $route = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
 ?>

@@ -1,1 +1,1 @@
-© 2025 FrameworkX. Все права защищены.
+© 2025 PASE - Programmers' Admin & Content Engine. Все права защищены.

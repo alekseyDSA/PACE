@@ -1,2 +1,2 @@
-<span>Версия 1.0.3 — стабильная</span>
+<span>Версия 0.0.2 — Снапшот</span>
 <div class="progress"><div class="progress-fill"></div></div>

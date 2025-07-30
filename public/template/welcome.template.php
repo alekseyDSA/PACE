@@ -2,7 +2,7 @@
 $componentsPath = isset($GLOBALS['componentsPath']) ? $GLOBALS['componentsPath'] : 'default';
 ?>
 
-<header>Добро пожаловать в FrameworkX</header>
+<header>Добро пожаловать в Framework PASE - Programmers' Admin & Content Engine</header>
 
 <div class="banner">
     <?php include __DIR__ . "/../pages/{$componentsPath}/banner.php"; ?>
