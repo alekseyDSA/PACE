@@ -1,0 +1,16 @@
+<?php
+include __DIR__ . '/../kernel/kernel.php';
+$route = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Мой сайт</title>
+    <?php autoincludeCss();?>
+</head>
+<body>
+<?php handleRoute($route, $routes);?>
+</body>
+</html>
+

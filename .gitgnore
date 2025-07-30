@@ -1,0 +1,31 @@
+# IDE
+.idea/
+*.iml
+*.user
+*.log
+
+# Системные
+.DS_Store
+Thumbs.db
+
+# Composer vendor (если есть)
+vendor/
+
+# Логи и кэш
+*.log
+cache/
+tmp/
+
+# Конфиденциальные конфиги (если есть)
+config/local.php
+config/*.local.php
+
+# Результаты сборки (если есть)
+build/
+dist/
+
+# node_modules если есть фронтенд
+node_modules/
+
+# Остальное
+*.swp

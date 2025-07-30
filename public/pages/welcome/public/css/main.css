@@ -1,0 +1,176 @@
+body {
+    background: #fff;
+    color: #111;
+}
+
+a {
+    color: #111;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+a:hover {
+    color: #555;
+}
+
+header {
+    border-bottom: 1px solid #ccc;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    user-select: none;
+    opacity: 0;
+    animation: fadeInUp 0.8s forwards;
+}
+
+nav a {
+    font-weight: 600;
+    letter-spacing: 0.05em;
+}
+nav a::after {
+    content: '';
+    display: block;
+    height: 2px;
+    background: #111;
+    width: 0;
+    transition: width 0.3s ease;
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+}
+nav a:hover::after {
+    width: 100%;
+}
+
+article {
+    font-family: 'Arial', sans-serif;
+    font-weight: 400;
+}
+article h2 {
+    font-family: 'Georgia', serif;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+article p {
+    color: #222;
+}
+
+aside {
+    font-family: 'Arial', sans-serif;
+    border-left: 1px solid #ccc;
+    color: #555;
+}
+
+footer {
+    border-top: 1px solid #ccc;
+    color: #777;
+    user-select: none;
+    opacity: 0;
+    animation: fadeInUp 0.8s 0.4s forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.banner {
+    background: #3a3a3a;
+    color: #ddd;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    user-select: none;
+    box-shadow: inset 0 -2px 6px rgba(0,0,0,0.4);
+}
+
+.banner .logo {
+    background: linear-gradient(135deg, #6b1e2a 40%, #4d1520 60%);
+    clip-path: polygon(
+            50% 0%, 90% 25%, 90% 75%,
+            50% 100%, 10% 75%, 10% 25%
+    );
+    box-shadow: 0 0 8px 1px rgba(107,30,42,0.7);
+    animation: logoFloat 5s ease-in-out infinite;
+    z-index: 0;
+    filter: drop-shadow(0 0 3px rgba(107,30,42,0.5));
+}
+
+.banner .slogan {
+    font-weight: 600;
+    letter-spacing: 0.07em;
+    color: #b46a6a;
+    text-shadow: 0 0 3px rgba(107,30,42,0.25);
+    animation: fadeInText 2s ease forwards;
+    opacity: 0;
+}
+
+@keyframes logoFloat {
+    0%, 100% {
+        transform: translateY(-50%) translateX(0);
+        box-shadow: 0 0 6px 1px rgba(107,30,42,0.5);
+    }
+    50% {
+        transform: translateY(calc(-50% - 8px)) translateX(10px);
+        box-shadow: 0 0 8px 2px rgba(107,30,42,0.7);
+    }
+}
+
+@keyframes fadeInText {
+    to {
+        opacity: 1;
+    }
+}
+
+.status-bar {
+    color: #999;
+    user-select: none;
+    opacity: 0;
+    animation: fadeInUp 0.8s 0.3s forwards;
+}
+
+.progress {
+    background: #e0e0e0;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.progress-fill {
+    background: linear-gradient(90deg, #6b1e2a, #8c2a3e);
+    border-radius: 3px;
+    animation: progressFill 2s ease forwards;
+}
+
+.progress-fill::after {
+    background: rgba(255,255,255,0.2);
+    animation: shine 2s infinite ease-in-out;
+}
+
+@keyframes progressFill {
+    from { width: 0; }
+    to { width: 80%; }
+}
+
+@keyframes shine {
+    0% { left: -50%; }
+    50% { left: 100%; }
+    100% { left: 100%; }
+}
+
+.features {
+    opacity: 0;
+    animation: fadeInUp 0.8s 0.3s forwards;
+}
+
+.feature {
+    color: #555;
+    user-select: none;
+}
+
+.feature .icon {
+    font-size: 2rem;
+    color: #6b1e2a;
+    margin-bottom: 0.3rem;
+}

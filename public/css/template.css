@@ -1,0 +1,143 @@
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    line-height: 1.6;
+    font-size: 18px;
+    font-family: 'Georgia', serif;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    flex-grow: 1;
+}
+
+header {
+    padding: 1.5rem 0;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+nav {
+    margin: 1rem 0 3rem;
+    text-align: center;
+}
+
+nav a {
+    margin: 0 1rem;
+    position: relative;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 3rem;
+}
+
+article h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+article p {
+    margin-bottom: 1.2rem;
+}
+
+aside {
+    padding-left: 1.5rem;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+footer {
+    padding: 1.5rem 0;
+    text-align: center;
+    font-size: 0.85rem;
+}
+
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    aside {
+        padding-left: 0;
+        padding-top: 1rem;
+        font-size: 0.85rem;
+    }
+}
+
+.banner {
+    position: relative;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    overflow: visible;
+    margin-bottom: 1.5rem;
+    padding: 0 2rem;
+}
+
+.banner .logo {
+    position: absolute;
+    left: -2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 160px;
+    height: 160px;
+}
+
+.banner .slogan {
+    margin-left: 160px;
+    font-size: 1.3rem;
+    max-width: 600px;
+}
+
+.status-bar {
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    font-size: 0.9rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.progress {
+    position: relative;
+    width: 60%;
+    height: 6px;
+    margin-left: 1rem;
+}
+
+.progress-fill {
+    position: relative;
+    height: 100%;
+    width: 80%;
+}
+
+.progress-fill::after {
+    position: absolute;
+    top: 0;
+    left: -50%;
+    height: 100%;
+    width: 50%;
+    transform: skewX(-20deg);
+    pointer-events: none;
+}
+
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.9rem;
+    text-align: center;
+}
