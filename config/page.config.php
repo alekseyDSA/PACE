@@ -1,4 +1,7 @@
 <?php
+$env = 'dev';
+$debugger = true;
+
 $cssFiles = [
     [
         'path' => '/css/template.css',

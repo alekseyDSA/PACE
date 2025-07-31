@@ -1,3 +1,4 @@
 git mv .gitgnore .gitignore
 git commit -m "Переименование .gitgnore → .gitignore"
 git push
+/kernel/logs/

@@ -1,9 +1,8 @@
 <?php
-include_once __DIR__ . '/kernel.php';
 
 function autoincludeCss()
 {
-    global $cssFiles;  // обязательно указать глобальную переменную
+    global $cssFiles;
 
     if (!isset($cssFiles) || !is_array($cssFiles)) {
         echo "<!-- CSS конфигурация не найдена -->";
@@ -13,7 +12,6 @@ function autoincludeCss()
     usort($cssFiles, function ($a, $b) {
         $priorityA = isset($a['priority']) ? $a['priority'] : 100;
         $priorityB = isset($b['priority']) ? $b['priority'] : 100;
-        // Убрал вывод echo отсюда, чтобы не мешать сортировке
         return ($priorityA < $priorityB) ? -1 : 1;
     });
 
@@ -34,4 +32,3 @@ function autoincludeCss()
         echo '<link rel="stylesheet" href="' . htmlspecialchars($path, ENT_QUOTES, 'UTF-8') . '">' . "\n";
     }
 }
-?>
