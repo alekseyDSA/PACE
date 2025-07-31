@@ -1,0 +1,153 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    background-color: #fafafa;
+    color: #333;
+}
+
+.admin-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Шапка с лёгкой тенью */
+.admin-header {
+    background-color: #f0f0f0;
+    color: #444;
+    padding: 1rem 2rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    user-select: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    opacity: 0;
+    animation: fadeInUp 0.8s forwards;
+}
+
+/* Основная сетка */
+.admin-layout {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+/* Меню с тенью и плавным появлением */
+.admin-left-vertical-menu {
+    width: 220px;
+    background-color: #e5e5e5;
+    padding: 1rem 1.5rem;
+    box-sizing: border-box;
+    color: #666;
+    overflow-y: auto;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    user-select: none;
+    border-right: 1px solid #d0d0d0;
+    box-shadow: 2px 0 8px rgba(0,0,0,0.05);
+    opacity: 0;
+    animation: fadeInUp 0.8s 0.2s forwards;
+    overflow-x: hidden;
+
+}
+
+/* Ссылки меню */
+.admin-left-vertical-menu a {
+    display: block;
+    color: #666;
+    text-decoration: none;
+    margin-bottom: 0.7rem;
+    position: relative;
+    transition: color 0.3s ease;
+    padding: 0.4rem 0.3rem;
+    border-radius: 4px;
+}
+
+/* Акцент и подчеркивание при наведении */
+.admin-left-vertical-menu a:hover {
+    color: #4a90e2;
+    background-color: rgba(74, 144, 226, 0.1);
+}
+
+.admin-left-vertical-menu a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background: #4a90e2;
+    transition: width 0.3s ease;
+}
+
+.admin-left-vertical-menu a:hover::after {
+    width: 100%;
+}
+
+/* Контейнер для выпадающего меню */
+.admin-left-vertical-menu .submenu {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 0 1rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, opacity 0.4s ease, transform 0.4s ease;
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+/* Внутренние ссылки подменю */
+.admin-left-vertical-menu .submenu a {
+    margin-bottom: 0.5rem;
+    color: #555;
+    font-weight: 400;
+    padding-left: 0.5rem;
+}
+
+/* Появление подменю при наведении на родительский элемент */
+.admin-left-vertical-menu li:hover > .submenu {
+    max-height: 500px; /* достаточно большое для всех пунктов */
+    opacity: 1;
+    transform: translateY(0);
+    overflow: visible;
+}
+
+/* Контент */
+.admin-content {
+    flex: 1;
+    background-color: #fff;
+    padding: 2rem;
+    box-sizing: border-box;
+    overflow-y: auto;
+    font-family: 'Arial', sans-serif;
+    color: #444;
+    opacity: 0;
+    animation: fadeInUp 0.8s 0.3s forwards;
+}
+
+/* Футер с тенью */
+.admin-footer {
+    background-color: #f0f0f0;
+    color: #888;
+    text-align: center;
+    padding: 1rem 2rem;
+    font-size: 0.9rem;
+    user-select: none;
+    border-top: 1px solid #d0d0d0;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.05);
+    opacity: 0;
+    animation: fadeInUp 0.8s 0.4s forwards;
+}
+
+/* Анимация появления */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

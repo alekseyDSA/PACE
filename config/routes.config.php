@@ -1,15 +1,15 @@
 <?php
 return [
     '/' => [
-        'template' => null,
+        'template' => 'welcome',
         'content' => 'welcome',
     ],
     '/about' => [
-        'template' => 'welcome.template.php',
+        'template' => 'welcome',
         'content' => 'about',
     ],
     '/admin' => [
-        'template' => 'admin.template.php',
+        'template' => 'admin',
         'content' => 'dashboard',
     ],
 ];

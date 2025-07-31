@@ -12,10 +12,11 @@ function handleRoute($path, $routes) {
     global $defaultTemplate;
     if (!isset($routes[$path])) {
         http_response_code(404);
-        include __DIR__ . '/../public/template/404.template.php';
+       // include __DIR__ . '/../public/template/404.template.php';
         return;
     }
     $route = $routes[$path];
+
     $template = isset($route['template']) ? $route['template'] : $GLOBALS['defaultTemplate'];
 
     $componentsPath = isset($route['content']) ? $route['content'] : null;

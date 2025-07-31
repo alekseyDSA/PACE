@@ -2,33 +2,29 @@
 $componentsPath = isset($GLOBALS['componentsPath']) ? $GLOBALS['componentsPath'] : 'default';
 ?>
 
-<header>Добро пожаловать в Framework PASE - Programmers' Admin & Content Engine</header>
+<div class="admin-container">
 
-<div class="banner">
-    <?php include __DIR__ . "/../pages/{$componentsPath}/banner.php"; ?>
-</div>
-
-<nav>
-    <?php include __DIR__ . "/../pages/{$componentsPath}/horizontalNavigation.php"; ?>
-</nav>
-
-<div class="features">
-    <?php include __DIR__ . "/../pages/{$componentsPath}/feature.php"; ?>
-</div>
-
-<div class="status-bar">
-    <?php include __DIR__ . "/../pages/{$componentsPath}/statusBar.php"; ?>
-</div>
-
-<main>
-    <article>
-        <?php include __DIR__ . "/../pages/{$componentsPath}/article.php"; ?>
-    </article>
-    <aside>
-        <?php include __DIR__ . "/../pages/{$componentsPath}/aside.php"; ?>
+    <!-- Вертикальное меню -->
+    <aside class="admin-sidebar">
+        <?php include __DIR__ . "/../pages/{$componentsPath}/sidebar.php"; ?>
     </aside>
-</main>
 
-<footer>
-    <?php include __DIR__ . "/../pages/{$componentsPath}/footer.php"; ?>
-</footer>
+    <div class="admin-main">
+
+        <!-- Верхняя панель -->
+        <header class="admin-topbar">
+            <?php include __DIR__ . "/../pages/{$componentsPath}/topbar.php"; ?>
+        </header>
+
+        <!-- Основное содержимое -->
+        <main class="admin-content">
+            <?php include __DIR__ . "/../pages/{$componentsPath}/main.php"; ?>
+        </main>
+
+        <!-- Нижний футер -->
+        <footer class="admin-footer">
+            <?php include __DIR__ . "/../pages/{$componentsPath}/footer.php"; ?>
+        </footer>
+    </div>
+
+</div>
